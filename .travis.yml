@@ -4,4 +4,15 @@ services:
   - docker
 
 script:
-  - docker run -v "$PWD/pigpio:/data" mnagaku/jnaerator:0.12 java -jar jnaerator.jar -mode StandaloneJar -structsInLibrary -runtime JNA -jar /data/pigpio.jar /data/pigpio.h
+  - docker run -v "$TRAVIS_BUILD_DIR:/data" mnagaku/jnaerator:0.12 java -jar jnaerator.jar -mode StandaloneJar -structsInLibrary -runtime JNA -jar /data/build/com/github/jw3/pigpio-jna/pigpio-jna-0.1.jar /data/pigpio/pigpio.h
+
+after_script:
+  - sudo chown -R travis:travis "$TRAVIS_BUILD_DIR"
+  - cp pom.xml "$TRAVIS_BUILD_DIR/build/com/github/jw3/pigpio-jna"
+  - ls -al "$TRAVIS_BUILD_DIR/build/com/github/jw3/pigpio-jna"
+  
+deploy:
+  provider: bintray
+  file: "bintray.json"
+  user: "jw3"
+  key: "$BINTRAY_API_KEY"
