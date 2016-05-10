@@ -1,0 +1,7 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker run -v "$PWD/pigpio:/data" mnagaku/jnaerator:0.12 java -jar jnaerator.jar -mode StandaloneJar -structsInLibrary -runtime JNA -jar /data/pigpio.jar /data/pigpio.h
