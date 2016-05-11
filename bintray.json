@@ -1,0 +1,17 @@
+{
+    "package": {
+        "name": "pigpio-jna",
+        "repo": "maven",
+        "subject": "com.github.jw3"
+    },
+
+    "version": {
+        "name": "0.1"
+    },
+
+    "files":
+        [
+        {"includePattern": "build/(.*)", "uploadPattern": "/$1"}
+        ],
+    "publish": true
+}
