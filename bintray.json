@@ -2,7 +2,7 @@
     "package": {
         "name": "pigpio-jna",
         "repo": "maven",
-        "subject": "com.github.jw3"
+        "subject": "jw3"
     },
 
     "version": {
