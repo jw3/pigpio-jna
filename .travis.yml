@@ -16,6 +16,8 @@ script:
       java -jar jnaerator.jar 
       -mode StandaloneJar -runtime JNA 
       -jar "/data/build/$PIGPIO_ARTIFACT.jar" 
+      -library pigpio
+      -package pigpio.javadsl
       /data/pigpio/pigpio.h
   - sudo chown -R travis:travis "$TRAVIS_BUILD_DIR"
   - cp pom.xml "$TRAVIS_BUILD_DIR/build/$PIGPIO_ARTIFACT.pom"
