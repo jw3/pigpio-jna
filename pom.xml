@@ -5,7 +5,7 @@
 	<groupId>com.github.jw3</groupId>
     <artifactId>pigpio-jna</artifactId>
     <name>PIGPIO JNA Bindings</name>
-    <version>0.1</version>
+    <version>PIGPIO_VERSION</version>
     <packaging>jar</packaging>
 
     <dependencies>
