@@ -22,6 +22,7 @@ script:
   - sudo chown -R travis:travis "$TRAVIS_BUILD_DIR"
   - cp pom.xml "$TRAVIS_BUILD_DIR/build/$PIGPIO_ARTIFACT.pom"
   - sed "s#PIGPIO_VERSION#$PIGPIO_VERSION#" -i "$TRAVIS_BUILD_DIR/build/$PIGPIO_ARTIFACT.pom"
+  - sed "s#PIGPIO_VERSION#$PIGPIO_VERSION#" -i "$TRAVIS_BUILD_DIR/bintray.json"
   - ls -al "$TRAVIS_BUILD_DIR/build/$PIGPIO_GROUP/$PIGPIO_NAME/$PIGPIO_VERSION"
   
 deploy:
