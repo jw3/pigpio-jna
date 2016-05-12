@@ -23,4 +23,4 @@ deploy:
   user: "jw3"
   key: "$BINTRAY_API_KEY"
   on:
-    branch: deployment
+    tags: true
