@@ -12,7 +12,7 @@ Current WIP is based on pigpio [V52](https://github.com/joan2937/pigpio/commit/0
 
 ### Artifacts
 
-```"com.github.jw3" % "pigpio-jna" % "0.3"```
+```"com.github.jw3" % "pigpio-jna" % "0.5"```
 
 ### Bugs and Feedback
 
