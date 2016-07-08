@@ -8,11 +8,11 @@ Using a git submodule to import pigpio and a dockerized JNAerator we generate a 
 
 This is currently a WIP using the 0.x numbers, when stable the version number will be synced to the supported pigpio version.
 
-Current WIP is based on pigpio [V52](https://github.com/joan2937/pigpio/commit/09adafce0ce22e383a6c3d33f3e81f39201e29a6)
+Current WIP is based on pigpio [V54](https://github.com/joan2937/pigpio/commit/862f445669a7ba95eeafdc6b7920ac2090750a99)
 
 ### Artifacts
 
-```"com.github.jw3" % "pigpio-jna" % "0.3"```
+```"com.github.jw3" % "pigpio-jna" % "0.5"```
 
 ### Bugs and Feedback
 
