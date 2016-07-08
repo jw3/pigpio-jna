@@ -6,13 +6,9 @@ Attempt at a Travis based auto-generation of JNA bindings for the great pigpio l
 
 Using a git submodule to import pigpio and a dockerized JNAerator we generate a JNA bindings jar and push it to Bintray.
 
-This is currently a WIP using the 0.x numbers, when stable the version number will be synced to the supported pigpio version.
-
-Current WIP is based on pigpio [V52](https://github.com/joan2937/pigpio/commit/09adafce0ce22e383a6c3d33f3e81f39201e29a6)
-
 ### Artifacts
 
-```"com.github.jw3" % "pigpio-jna" % "0.3"```
+```"com.github.jw3" % "pigpio-jna" % "0.40.0"```
 
 ### Bugs and Feedback
 
