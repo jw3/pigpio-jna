@@ -7,7 +7,7 @@ env:
   global:
     - PIGPIO_GROUP="com/github/jw3"
     - PIGPIO_NAME="pigpio-jna"
-    - PIGPIO_VERSION="0.6-SNAPSHOT"
+    - PIGPIO_VERSION="0.6"
     - PIGPIO_ARTIFACT="$PIGPIO_GROUP/$PIGPIO_NAME/$PIGPIO_VERSION/$PIGPIO_NAME-$PIGPIO_VERSION"
   
 script:
@@ -24,14 +24,14 @@ script:
   - ls -al "$TRAVIS_BUILD_DIR/build/$PIGPIO_GROUP/$PIGPIO_NAME/$PIGPIO_VERSION"
 
 before_deploy:
-  echo "preparing configuration for pigpio-jna v$PIGPIO_VERSION"
+  - echo "preparing configuration for pigpio-jna v$PIGPIO_VERSION"
   - sed "s#PIGPIO_VERSION#$PIGPIO_VERSION#" -i "$TRAVIS_BUILD_DIR/build/$PIGPIO_ARTIFACT.pom"
   - sed "s#PIGPIO_VERSION#$PIGPIO_VERSION#" -i "$TRAVIS_BUILD_DIR/bintray.json"
   - sed "s#PIGPIO_BUILD_DIR#$TRAVIS_BUILD_DIR/build#" -i "$TRAVIS_BUILD_DIR/bintray.json"
 
 deploy:
   provider: bintray
-  file: "bintray.json"
+  file: "$TRAVIS_BUILD_DIR/bintray.json"
   user: "jw3"
   key: "$BINTRAY_API_KEY"
   on:
