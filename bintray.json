@@ -11,7 +11,7 @@
 
     "files":
         [
-        {"includePattern": "build/(.*)", "uploadPattern": "/$1"}
+        {"includePattern": "PIGPIO_BUILD_DIR/(.*)", "uploadPattern": "/$1"}
         ],
     "publish": true
 }
