@@ -28,6 +28,7 @@ before_deploy:
   - sed "s#PIGPIO_VERSION#$PIGPIO_VERSION#" -i "$TRAVIS_BUILD_DIR/build/$PIGPIO_ARTIFACT.pom"
   - sed "s#PIGPIO_VERSION#$PIGPIO_VERSION#" -i "$TRAVIS_BUILD_DIR/bintray.json"
   - sed "s#PIGPIO_BUILD_DIR#$TRAVIS_BUILD_DIR/build#" -i "$TRAVIS_BUILD_DIR/bintray.json"
+  - cat "$TRAVIS_BUILD_DIR/bintray.json"
 
 deploy:
   provider: bintray
@@ -36,3 +37,6 @@ deploy:
   key: "$BINTRAY_API_KEY"
   on:
     tags: true
+
+after_deploy:
+  - cat "$TRAVIS_BUILD_DIR/bintray.json"
