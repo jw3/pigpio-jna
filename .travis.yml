@@ -31,6 +31,7 @@ after_success:
   - cat "$TRAVIS_BUILD_DIR/bintray.json"
 
 deploy:
+  skip_cleanup: true
   provider: bintray
   file: "$TRAVIS_BUILD_DIR/bintray.json"
   user: "jw3"
