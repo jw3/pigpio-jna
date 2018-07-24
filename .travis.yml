@@ -28,6 +28,7 @@ before_deploy:
   - sed "s#PIGPIO_VERSION#$PIGPIO_VERSION#" -i "$TRAVIS_BUILD_DIR/bintray.json"
 
 deploy:
+  skip_cleanup: true
   provider: bintray
   file: "bintray.json"
   user: "jw3"
